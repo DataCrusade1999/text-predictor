@@ -52,10 +52,12 @@ importers:
       eslint: 7.32.0
       eslint-config-custom: workspace:*
       framer-motion: ^6
+      js-markov: ^3.0.3
       next: 12.3.1
       next-transpile-modules: 9.0.0
       react: 18.2.0
       react-dom: 18.2.0
+      seedrandom: ^3.0.5
       tsconfig: workspace:*
       typescript: ^4.5.3
       ui: workspace:*
@@ -64,9 +66,11 @@ importers:
       '@emotion/react': 11.10.4_u4psdusp3xnibxirju73jsdo4y
       '@emotion/styled': 11.10.4_t322om6awaev4as5dzz2mzvtoq
       framer-motion: 6.5.1_biqbaboplfbrettd7655fr4n2y
+      js-markov: 3.0.3
       next: 12.3.1_qtpcxnaaarbm4ws7ughq6oxfve
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+      seedrandom: 3.0.5
       ui: link:../../packages/ui
     devDependencies:
       '@babel/core': 7.19.6
@@ -3087,6 +3091,10 @@ packages:
   /isexe/2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
 
+  /js-markov/3.0.3:
+    resolution: {integrity: sha512-UgKhwGn5G2XgPr13VK73ExrMVsZCrr7XbH34mKAD96qwjMg+3w0wgUDeJg6g9YqMhabLElFm3Kr8P5Ej9KKFyg==}
+    dev: false
+
   /js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
@@ -3614,6 +3622,10 @@ packages:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
       loose-envify: 1.4.0
+    dev: false
+
+  /seedrandom/3.0.5:
+    resolution: {integrity: sha512-8OwmbklUNzwezjGInmZ+2clQmExQPvomqjL7LFqOYqtmuxRgQYqOD3mHaU+MvZn5FLUeVxVfQjwLZW/n/JFuqg==}
     dev: false
 
   /semver/6.3.0:
