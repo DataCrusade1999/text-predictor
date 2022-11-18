@@ -7,17 +7,27 @@ const Markov = require('js-markov');
 
 export default function Web() {
   let [value, setValue] = React.useState('')
+  let [markovValue, setValuMarkov] = React.useState('')
 
   let handleInputChange = (e: any) => {
-    // e.preventDefault()
+    e.preventDefault()
     let inputValue = e.target.value
+    setValue(inputValue)
+  }
+  let markovInput = (e: any) => {
+    e.preventDefault()
     var markov = new Markov();
-    markov.addStates([
-      inputValue
-    ]);
+    markov.addStates(value);
+    // markov.addStates([
+    //   'Today is sunny',
+    //   'Today is rainy',
+    //   'The weather is sunny',
+    //   'The weather for today is sunny',
+    //   'The weather for tomorrow might be rainy'
+    // ]);
     markov.train(3);
     var longText = markov.generateRandom(50);
-    setValue(longText)
+    setValuMarkov(longText)
   }
 
   return (
@@ -32,6 +42,13 @@ export default function Web() {
         borderRadius={10}
         value={value}
         onChange={handleInputChange}
+        placeholder='Here is a sample placeholder'
+        size='sm' />
+      <Textarea
+        w="50%"
+        borderRadius={10}
+        value={markovValue}
+        onChange={markovInput}
         placeholder='Here is a sample placeholder'
         size='sm' />
       <Link href="./experiment">Next Page</Link>
