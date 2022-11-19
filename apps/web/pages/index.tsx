@@ -17,7 +17,13 @@ export default function Web() {
   let markovInput = (e: any) => {
     e.preventDefault()
     var markov = new Markov();
-    markov.addStates(value);
+    markov.addStates([
+      value,
+      `Hey ${value},Today is sunny`,
+      `Hey ${value},Today is rainy`,
+      `The weather is sunny today ${value}`,
+      'The weather for today is sunny',
+      'The weather for tomorrow might be rainy']);
     // markov.addStates([
     //   'Today is sunny',
     //   'Today is rainy',
